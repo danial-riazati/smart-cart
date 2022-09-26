@@ -1,0 +1,12 @@
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/bin/Release/net6.0/CipherHelper.deps.json
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/bin/Release/net6.0/CipherHelper.dll
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/bin/Release/net6.0/CipherHelper.pdb
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.csproj.AssemblyReference.cache
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.AssemblyInfoInputs.cache
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.AssemblyInfo.cs
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.csproj.CoreCompileInputs.cache
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.dll
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/refint/CipherHelper.dll
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/CipherHelper.pdb
+/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/Release/net6.0/ref/CipherHelper.dll

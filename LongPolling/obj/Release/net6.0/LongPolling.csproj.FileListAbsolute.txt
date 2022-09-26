@@ -1,0 +1,12 @@
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/bin/Release/net6.0/LongPolling.deps.json
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/bin/Release/net6.0/LongPolling.dll
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/bin/Release/net6.0/LongPolling.pdb
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.csproj.AssemblyReference.cache
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.AssemblyInfoInputs.cache
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.AssemblyInfo.cs
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.csproj.CoreCompileInputs.cache
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.dll
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/refint/LongPolling.dll
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/LongPolling.pdb
+/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/Release/net6.0/ref/LongPolling.dll

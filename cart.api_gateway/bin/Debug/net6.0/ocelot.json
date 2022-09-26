@@ -1,0 +1,14 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": ""
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "",
+      "DownstreamScheme": "",
+      "DownstreamHostAndPorts": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "6MnaDA54fNys3DoNmkmAms8uLp4Dh9LF9KnAKYW01fpKVZc+25FHvqSfxtlFf745qvV0ReE9KiPOvsXSsk0Jww==",
+  "success": true,
+  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/cart.services.cart_service.csproj",
+  "expectedPackageFiles": [
+    "/Users/danial/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/danial/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/danial/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/danial/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/danial/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/danial/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

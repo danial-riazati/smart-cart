@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="m">
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.payment__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.cart__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="m" Name="m">
+      <Items>
+        <StartupItem ItemId="{F78B85D8-B06E-426B-8F6F-97DE70FF1DB0}" ItemName="cart.api_gateway" ConfigurationId="Default" />
+        <StartupItem ItemId="{4BE83667-26C8-4E41-B85D-51D274DB000A}" ItemName="cart.services.account_service" ConfigurationId="Default" />
+        <StartupItem ItemId="{A017310D-1F3C-4C6E-B7A7-0AA765189946}" ItemName="cart.services.payment_service" ConfigurationId="Default" />
+        <StartupItem ItemId="{A8AD41C9-4A13-4C24-8EF4-E697A60FCCDC}" ItemName="cart.services.product_service" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workbench ActiveDocument="cart.services.account_service/Program.cs">
+    <Files>
+      <File FileName="cart.services.account_service/Program.cs" Line="64" Column="25" />
+      <File FileName="cart.api_gateway/ocelot.json" Line="1" Column="1" />
+      <File FileName="docker-compose.yaml" Line="1" Column="1" />
+      <File FileName="cart.services.product_service/Program.cs" Line="36" Column="1" />
+      <File FileName="CipherHelper/Core.cs" Line="62" Column="46" />
+      <File FileName="cart.services.account_service/Models/OtpDTO.cs" Line="5" Column="7" />
+      <File FileName="cart.services.account_service/appsettings.json" Line="11" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SmartCart" expanded="True">
+            <Node name="ApiGateway" expanded="True" />
+            <Node name="Packages" expanded="True" />
+            <Node name="Services" expanded="True">
+              <Node name="cart.services.account_service" expanded="True">
+                <Node name="Models" expanded="True" />
+                <Node name="Repos" expanded="True" />
+                <Node name="Program.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Solution Items" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.product__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.account__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ApiGateway.cart.api__gateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

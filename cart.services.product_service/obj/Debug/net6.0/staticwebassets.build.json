@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yFGNUcLtslFvHoEI2eHCTfV60vN2mYybFEfhHsAt9go=",
+  "Source": "cart.services.product_service",
+  "BasePath": "_content/cart.services.product_service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

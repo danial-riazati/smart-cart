@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+ product_db:
+  image: mysql:latest
+  restart: always
+  environment: 
+   MYSQL_DATABASE: 'ProductDB'
+   MYSQL_USER: 'user'
+   MYSQL_PASSWORD: 'SM@RTcart'
+   MYSQL_ROOT_PASSWORD: 'password'
+  ports:
+   - '3306:3306'
+  expose:
+   - '3306'
+  volumes:
+   - my-db:/var/lib/mysql
+ cart_db:
+  image: mysql:latest
+  restart: always
+  environment: 
+   MYSQL_DATABASE: 'CartDB'
+   MYSQL_USER: 'user'
+   MYSQL_PASSWORD: 'C@rtDB'
+   MYSQL_ROOT_PASSWORD: 'password'
+   MYSQL_TCP_PORT: 3307
+  ports:
+   - '3307:3307'
+  expose:
+   - '3307'
+  volumes:
+   - my-db2:/var/lib/mysql2
+
+volumes:
+ my-db:
+ my-db2:
