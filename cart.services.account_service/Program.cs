@@ -69,6 +69,7 @@ app.MapPost("/checkin",   async (IAccountRepo repo, [FromQuery(Name ="cartId")] 
 
 app.MapPost("/otp", async ([FromBody] OtpDTO dto) =>
 {
+    var x = 2;
     try
     {
         if (dto.MobileNumber == null || !Regex.IsMatch(dto.MobileNumber, "^[0-9]{11}$", RegexOptions.Compiled)) 

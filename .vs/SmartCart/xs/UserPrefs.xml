@@ -15,13 +15,14 @@
   <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.Workbench ActiveDocument="cart.services.account_service/Program.cs">
     <Files>
-      <File FileName="cart.services.account_service/Program.cs" Line="64" Column="25" />
+      <File FileName="cart.services.account_service/Program.cs" Line="54" Column="1" />
       <File FileName="cart.api_gateway/ocelot.json" Line="1" Column="1" />
       <File FileName="docker-compose.yaml" Line="1" Column="1" />
       <File FileName="cart.services.product_service/Program.cs" Line="36" Column="1" />
       <File FileName="CipherHelper/Core.cs" Line="62" Column="46" />
-      <File FileName="cart.services.account_service/Models/OtpDTO.cs" Line="5" Column="7" />
+      <File FileName="cart.services.account_service/Models/OtpDTO.cs" Line="6" Column="28" />
       <File FileName="cart.services.account_service/appsettings.json" Line="11" Column="4" />
+      <File FileName="cart.services.account_service/Properties/launchSettings.json" Line="16" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,6 +33,7 @@
             <Node name="Services" expanded="True">
               <Node name="cart.services.account_service" expanded="True">
                 <Node name="Models" expanded="True" />
+                <Node name="Properties" expanded="True" />
                 <Node name="Repos" expanded="True" />
                 <Node name="Program.cs" selected="True" />
               </Node>
