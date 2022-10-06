@@ -1,7 +1,0 @@
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.csproj.AssemblyReference.cache
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.GeneratedMSBuildEditorConfig.editorconfig
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.AssemblyInfoInputs.cache
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.AssemblyInfo.cs
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.csproj.CoreCompileInputs.cache
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.MvcApplicationPartsAssemblyInfo.cs
-/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/Debug/net6.0/cart.services.cart_service.MvcApplicationPartsAssemblyInfo.cache

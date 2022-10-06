@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="m" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.ItemProperties.Services.cart.services.cart__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SmartCart" expanded="True">
+          <Node name="SmartCart" expanded="True" selected="True">
             <Node name="ApiGateway" expanded="True" />
             <Node name="Packages" expanded="True" />
-            <Node name="Services" expanded="True">
-              <Node name="cart.services.sms_service" selected="True" />
-            </Node>
+            <Node name="Services" expanded="True" />
             <Node name="Solution Items" expanded="True" />
           </Node>
         </State>
@@ -19,17 +19,14 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Services.cart.services.product__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <Debugger.DebugSourceFolders />
-  <MonoDevelop.Ide.ItemProperties.Services.cart.services.payment__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.ApiGateway.cart.api__gateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.Services.cart.services.sms__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Services.cart.services.account__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.product__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.sms__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.cart__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.payment__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.ApiGateway.cart.api__gateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="m" Name="m">
       <Items>
@@ -38,4 +35,5 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
