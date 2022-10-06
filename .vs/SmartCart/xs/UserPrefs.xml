@@ -1,21 +1,8 @@
-﻿<Properties StartupConfiguration="m">
-  <MonoDevelop.Ide.ItemProperties.Services.cart.services.payment__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+﻿<Properties StartupConfiguration="m" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.ItemProperties.Services.cart.services.cart__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="m" Name="m">
-      <Items>
-        <StartupItem ItemId="{F78B85D8-B06E-426B-8F6F-97DE70FF1DB0}" ItemName="cart.api_gateway" ConfigurationId="Default" />
-        <StartupItem ItemId="{4BE83667-26C8-4E41-B85D-51D274DB000A}" ItemName="cart.services.account_service" ConfigurationId="Default" />
-        <StartupItem ItemId="{A017310D-1F3C-4C6E-B7A7-0AA765189946}" ItemName="cart.services.payment_service" ConfigurationId="Default" />
-        <StartupItem ItemId="{A8AD41C9-4A13-4C24-8EF4-E697A60FCCDC}" ItemName="cart.services.product_service" ConfigurationId="Default" />
-      </Items>
-    </MultiItemSolutionRunConfiguration>
-  </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.Workbench ActiveDocument="cart.services.account_service/Program.cs">
     <Files>
-      <File FileName="cart.services.account_service/Program.cs" Line="54" Column="1" />
+      <File FileName="cart.services.account_service/Program.cs" Line="81" Column="1" />
       <File FileName="cart.api_gateway/ocelot.json" Line="1" Column="1" />
       <File FileName="docker-compose.yaml" Line="1" Column="1" />
       <File FileName="cart.services.product_service/Program.cs" Line="36" Column="1" />
@@ -23,6 +10,11 @@
       <File FileName="cart.services.account_service/Models/OtpDTO.cs" Line="6" Column="28" />
       <File FileName="cart.services.account_service/appsettings.json" Line="11" Column="4" />
       <File FileName="cart.services.account_service/Properties/launchSettings.json" Line="16" Column="44" />
+      <File FileName="cart.services.sms_service/Program.cs" Line="21" Column="12" />
+      <File FileName="cart.services.account_service/Models/CheckinDTO.cs" Line="7" Column="48" />
+      <File FileName="cart.services.sms_service/Models/SmsDTO.cs" Line="10" Column="1" />
+      <File FileName="cart.services.sms_service/appsettings.json" Line="10" Column="28" />
+      <File FileName="cart.services.account_service/Repos/IAccountRepo.cs" Line="9" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -35,7 +27,9 @@
                 <Node name="Models" expanded="True" />
                 <Node name="Properties" expanded="True" />
                 <Node name="Repos" expanded="True" />
-                <Node name="Program.cs" selected="True" />
+              </Node>
+              <Node name="cart.services.sms_service" expanded="True">
+                <Node name="Models" expanded="True" />
               </Node>
             </Node>
             <Node name="Solution Items" expanded="True" />
@@ -48,10 +42,22 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Services.cart.services.product__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.Services.cart.services.account__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.payment__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.ApiGateway.cart.api__gateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.sms__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Services.cart.services.account__service PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="m" Name="m">
+      <Items>
+        <StartupItem ItemId="{4BE83667-26C8-4E41-B85D-51D274DB000A}" ItemName="cart.services.account_service" ConfigurationId="Default" />
+        <StartupItem ItemId="{F41E382C-8BA6-481C-AA85-570459E0B384}" ItemName="cart.services.sms_service" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
 </Properties>
