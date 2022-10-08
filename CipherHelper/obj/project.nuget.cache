@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "anLZm68q1UyY6lbIPpWMVmekW5/xUHJVWYuGvhEuVwBVS8wsHVe/P9n7NvkBFcQJI4yT0W0ngNCEw/UkuyJmxg==",
+  "dgSpecHash": "Rr0E7gVfd3cAFqmixQZ7JCzr1Khzb8/ATgjC5PO624dxe0ZfX5zH1RfpCA8e9Rrn+gKMDn7Yu0hr8a1de6escQ==",
   "success": true,
-  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj",
+  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj",
   "expectedPackageFiles": [
     "/Users/danial/.nuget/packages/portable.bouncycastle/1.9.0/portable.bouncycastle.1.9.0.nupkg.sha512"
   ],

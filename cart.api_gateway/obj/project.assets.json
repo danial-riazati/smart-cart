@@ -2166,11 +2166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/cart.api_gateway/cart.api_gateway.csproj",
+      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.api_gateway/cart.api_gateway.csproj",
       "projectName": "cart.api_gateway",
-      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.api_gateway/cart.api_gateway.csproj",
+      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.api_gateway/cart.api_gateway.csproj",
       "packagesPath": "/Users/danial/.nuget/packages/",
-      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.api_gateway/obj/",
+      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.api_gateway/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/danial/.nuget/NuGet/NuGet.Config"

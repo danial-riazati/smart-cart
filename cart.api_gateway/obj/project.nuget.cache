@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a5g5LIWOv8jiiyLZHI0R/in5RO85nkCRDKObjoP/jet8Aogey8qgs5DA6omPaLNWeg8EmTRe9f0mOJ5+fa0rhw==",
+  "dgSpecHash": "tHtoiQ6znZOQgzFU+Fub6Pq5ooQpt0Uto+j10kFKfwOVbp0X0ei0RYON1zBiu5OzabXkm6bg9uY6fUc0ZTpeIQ==",
   "success": true,
-  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.api_gateway/cart.api_gateway.csproj",
+  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.api_gateway/cart.api_gateway.csproj",
   "expectedPackageFiles": [
     "/Users/danial/.nuget/packages/fluentvalidation/10.3.6/fluentvalidation.10.3.6.nupkg.sha512",
     "/Users/danial/.nuget/packages/google.protobuf/3.19.4/google.protobuf.3.19.4.nupkg.sha512",

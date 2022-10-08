@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.account_service/cart.services.account_service.csproj": {}
+    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.account_service/cart.services.account_service.csproj": {}
   },
   "projects": {
-    "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.account_service/cart.services.account_service.csproj": {
+    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.account_service/cart.services.account_service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.account_service/cart.services.account_service.csproj",
+        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.account_service/cart.services.account_service.csproj",
         "projectName": "cart.services.account_service",
-        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.account_service/cart.services.account_service.csproj",
+        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.account_service/cart.services.account_service.csproj",
         "packagesPath": "/Users/danial/.nuget/packages/",
-        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.account_service/obj/",
+        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.account_service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/danial/.nuget/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj": {
-                "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj"
+              "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj": {
+                "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj"
               },
-              "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj": {
-                "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj"
+              "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj": {
+                "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj"
               }
             }
           }
@@ -101,14 +101,14 @@
         }
       }
     },
-    "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj": {
+    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj",
+        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj",
         "projectName": "CipherHelper",
-        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj",
+        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj",
         "packagesPath": "/Users/danial/.nuget/packages/",
-        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/",
+        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/danial/.nuget/NuGet/NuGet.Config"
@@ -160,14 +160,14 @@
         }
       }
     },
-    "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj": {
+    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj",
+        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj",
         "projectName": "LongPolling",
-        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj",
+        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj",
         "packagesPath": "/Users/danial/.nuget/packages/",
-        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/",
+        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/danial/.nuget/NuGet/NuGet.Config"

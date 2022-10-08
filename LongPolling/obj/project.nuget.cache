@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LSt3NxS/tH/69LvN+bdeUTWfSqbinXDx5sJQVCFZ/uy36vVs51RUolUspZwEjpTOFn1C9wTqktewT0Go76L6VA==",
+  "dgSpecHash": "wUWuuKLrHKBlMdorBNzTqUcWPVxBgxnJT/UzayRrnZyqvX6qj0PTa8xD1sS+7bthwv3Ksw/xLwiaiS82tAb64g==",
   "success": true,
-  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj",
+  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

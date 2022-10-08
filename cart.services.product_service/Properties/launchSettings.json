@@ -12,8 +12,7 @@
     "cart.services.product_service": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5231",
+      "applicationUrl": "http://localhost:44087",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

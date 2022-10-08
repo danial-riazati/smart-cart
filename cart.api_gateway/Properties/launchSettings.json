@@ -12,8 +12,7 @@
     "cart.api_gateway": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5107",
+      "applicationUrl": "http://localhost:24149",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

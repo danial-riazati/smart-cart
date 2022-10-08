@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4VmKwPOEjOVTj2J7SzL+CyiwJ7KcQkOuxZozph6rzD/FlIb3FnfJYnBPeppKdwim1oc1BLaVBoOJRLCWQ+CBUg==",
+  "dgSpecHash": "6StBChdYt3etLVdwIz+02bICD2HdKllq2amfnkesQQzFjbiJJOtvPQNT+4njvFsE2Ia/OiIE+GdsraubTPTFdA==",
   "success": true,
-  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.product_service/cart.services.product_service.csproj",
+  "projectFilePath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.product_service/cart.services.product_service.csproj",
   "expectedPackageFiles": [
     "/Users/danial/.nuget/packages/google.protobuf/3.19.4/google.protobuf.3.19.4.nupkg.sha512",
     "/Users/danial/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",

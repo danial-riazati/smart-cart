@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/cart.services.cart_service.csproj": {}
+    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.cart_service/cart.services.cart_service.csproj": {}
   },
   "projects": {
-    "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/cart.services.cart_service.csproj": {
+    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.cart_service/cart.services.cart_service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/cart.services.cart_service.csproj",
+        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.cart_service/cart.services.cart_service.csproj",
         "projectName": "cart.services.cart_service",
-        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/cart.services.cart_service.csproj",
+        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.cart_service/cart.services.cart_service.csproj",
         "packagesPath": "/Users/danial/.nuget/packages/",
-        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.cart_service/obj/",
+        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.cart_service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/danial/.nuget/NuGet/NuGet.Config"

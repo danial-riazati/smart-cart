@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj",
+      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj",
       "projectName": "LongPolling",
-      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/LongPolling.csproj",
+      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/LongPolling.csproj",
       "packagesPath": "/Users/danial/.nuget/packages/",
-      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/LongPolling/obj/",
+      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/LongPolling/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/danial/.nuget/NuGet/NuGet.Config"

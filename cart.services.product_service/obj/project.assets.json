@@ -1907,11 +1907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.product_service/cart.services.product_service.csproj",
+      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.product_service/cart.services.product_service.csproj",
       "projectName": "cart.services.product_service",
-      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.product_service/cart.services.product_service.csproj",
+      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.product_service/cart.services.product_service.csproj",
       "packagesPath": "/Users/danial/.nuget/packages/",
-      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/cart.services.product_service/obj/",
+      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.product_service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/danial/.nuget/NuGet/NuGet.Config"

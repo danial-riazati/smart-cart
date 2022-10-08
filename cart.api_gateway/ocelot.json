@@ -4,11 +4,16 @@
   },
   "Routes": [
     {
-      "UpstreamPathTemplate": "",
+      "UpstreamPathTemplate": "/products",
       "UpstreamHttpMethod": [ "GET" ],
-      "DownstreamPathTemplate": "",
-      "DownstreamScheme": "",
-      "DownstreamHostAndPorts": []
+      "DownstreamPathTemplate": "/products",
+      "DownstreamScheme": "/products",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7109
+        }
+      ]
     }
   ]
 }

@@ -41,11 +41,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj",
+      "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj",
       "projectName": "CipherHelper",
-      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/CipherHelper.csproj",
+      "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/CipherHelper.csproj",
       "packagesPath": "/Users/danial/.nuget/packages/",
-      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/CipherHelper/obj/",
+      "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/CipherHelper/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/danial/.nuget/NuGet/NuGet.Config"
