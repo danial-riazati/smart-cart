@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.payment_service/cart.services.payment_service.csproj": {}
+    "E:\\smart-cart\\smart-cart\\cart.services.payment_service\\cart.services.payment_service.csproj": {}
   },
   "projects": {
-    "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.payment_service/cart.services.payment_service.csproj": {
+    "E:\\smart-cart\\smart-cart\\cart.services.payment_service\\cart.services.payment_service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.payment_service/cart.services.payment_service.csproj",
+        "projectUniqueName": "E:\\smart-cart\\smart-cart\\cart.services.payment_service\\cart.services.payment_service.csproj",
         "projectName": "cart.services.payment_service",
-        "projectPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.payment_service/cart.services.payment_service.csproj",
-        "packagesPath": "/Users/danial/.nuget/packages/",
-        "outputPath": "/Users/danial/Downloads/SmartCart/SmartCart/smart-cart/cart.services.payment_service/obj/",
+        "projectPath": "E:\\smart-cart\\smart-cart\\cart.services.payment_service\\cart.services.payment_service.csproj",
+        "packagesPath": "C:\\Users\\riazati\\.nuget\\packages\\",
+        "outputPath": "E:\\smart-cart\\smart-cart\\cart.services.payment_service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/danial/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\riazati\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,60 +39,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.17.0, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.30, )"
-            },
-            "MySql.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
         }
       }
     }
