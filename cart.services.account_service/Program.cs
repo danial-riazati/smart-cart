@@ -57,21 +57,22 @@ app.MapPost("/checkin",   async (IAccountRepo repo, [FromBody]CheckinDTO dto) =>
     }
 });
 
-//app.MapPost("/otp", async ([FromBody] OtpDTO dto) =>
+//app.MapPost("/sendOtp", async ([FromBody] OtpDTO dto) =>
 //{
-//    var x = 2;
+    
 //    try
 //    {
-//        if (dto.MobileNumber == null || !Regex.IsMatch(dto.MobileNumber, "^[0-9]{11}$", RegexOptions.Compiled)) 
+//        if (dto.phoneNumber == null || !Regex.IsMatch(dto.phoneNumber, "^[0-9]{11}$", RegexOptions.Compiled))
 //        {
 //            return Results.BadRequest("mobile number is incorrect");
 //        }
 //        return Results.Ok
 //            (new
 //            {
-//                code = dto.MobileNumber.Substring(dto.MobileNumber.Length - 6)
+//                code = dto.phoneNumber.Substring(dto.phoneNumber.Length - 6)
 //            });
-//    }catch(Exception e)
+//    }
+//    catch (Exception e)
 //    {
 //        return Results.BadRequest($"mobile number is incorrect + {e}");
 //    }

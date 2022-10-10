@@ -28,7 +28,7 @@ internal class Program
             {
                 var sms = new Ghasedak.Core.Api(SMSToken);
 
-                var result = await sms.SendSMSAsync($"message\n code:{dto.OtpCode}", dto.MobileNumber, linenumber: LineNumber);
+                var result = await sms.SendSMSAsync($"message\n code:{dto.code}", dto.phoneNumber, linenumber: LineNumber);
                 if (result.Result.Code == 200)
                 {
                     return Results.Ok();
@@ -50,7 +50,3 @@ internal class Program
     }
 }
 
-record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
