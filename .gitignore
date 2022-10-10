@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 
-
+/.vs
 
 /cart.api_gateway/obj
 /cart.api_gateway/bin
