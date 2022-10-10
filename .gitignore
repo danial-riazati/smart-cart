@@ -13,9 +13,16 @@
 
 
 /cart.api_gateway/obj
+/cart.api_gateway/bin
 /cart.services.account_service/obj
+/cart.services.account_service/bin
 /cart.services.cart_service/obj
+/cart.services.cart_service/bin
 /cart.services.payment_service/obj
+/cart.services.payment_service/bin
 /cart.services.product_service/obj
+/cart.services.product_service/bin
 /CipherHelper/obj
+/CipherHelper/bin
 /LongPolling/obj
+/LongPolling/bin
