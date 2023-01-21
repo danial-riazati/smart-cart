@@ -10,73 +10,80 @@ using LongPolling;
 using cart.services.account_service.Models;
 using System.Text.RegularExpressions;
 
-var builder = WebApplication.CreateBuilder(args);
+using NLog;
+using NLog.Web;
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-var mySQLBuilder = new MySqlConnectionStringBuilder();
-mySQLBuilder.ConnectionString = builder.Configuration.GetConnectionString("MYSQLCONNECTION");
-mySQLBuilder.UserID = builder.Configuration["UserId"];
-mySQLBuilder.Password = builder.Configuration["Password"];
+var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 
-builder.Services.AddDbContext<CartDBContext>(opt => opt.UseMySQL(mySQLBuilder.ConnectionString));
-builder.Services.AddScoped<IAccountRepo, AccountRepo>();
 
-builder.Services.AddCors(options =>
+try
 {
-    options.AddPolicy("CORSPolicy", builder => builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((hosts) => true));
-}
-);
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Logging.ClearProviders();
+    builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+    builder.Host.UseNLog();
+
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
+    var mySQLBuilder = new MySqlConnectionStringBuilder();
+    mySQLBuilder.ConnectionString = builder.Configuration.GetConnectionString("MYSQLCONNECTION");
+   // mySQLBuilder.UserID = builder.Configuration["UserId"];
+   // mySQLBuilder.Password = builder.Configuration["Password"];
+    logger.Info(mySQLBuilder.ConnectionString);
+    builder.Services.AddDbContext<AccountDBContext>(opt => opt.UseMySQL(mySQLBuilder.ConnectionString));
+    builder.Services.AddScoped<IAccountRepo, AccountRepo>();
+
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("CORSPolicy", builder => builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((hosts) => true));
+    }
+    );
 
 
-var app = builder.Build();
+    var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.UseCors(x => x
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true) // allow any origin
+                    .AllowCredentials());
+
+    app.MapPost("/checkin", async (IAccountRepo repo, [FromBody] CheckinDTO dto) =>
+    {
+        logger.Info("init main");
+        try
+        {
+
+            var model = new Checkin { CartId = dto.CartId, PhoneNumber = dto.PhoneNumber };
+            var id = await repo.CheckIn(model);
+            return Results.Ok(new { id = id });
+        }
+        catch (Exception e)
+        {
+
+            return Results.Problem();
+        }
+    });
+
+
+
+
+    app.Run();
 }
-app.UseCors(x => x
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetIsOriginAllowed(origin => true) // allow any origin
-                .AllowCredentials());
-
-app.MapPost("/checkin",   async (IAccountRepo repo, [FromBody]CheckinDTO dto) =>
+catch (Exception e)
 {
-    try
-    {
-      
-        var model = new CheckInOut { CartId = dto.CartId, PhoneNumber = dto.PhoneNumber };
-        await repo.CheckIn(model);
-        return Results.Ok();
-    }catch(Exception e)
-    {
-        return Results.Problem();
-    }
-});
-
-//app.MapPost("/sendOtp", async ([FromBody] OtpDTO dto) =>
-//{
-    
-//    try
-//    {
-//        if (dto.phoneNumber == null || !Regex.IsMatch(dto.phoneNumber, "^[0-9]{11}$", RegexOptions.Compiled))
-//        {
-//            return Results.BadRequest("mobile number is incorrect");
-//        }
-//        return Results.Ok
-//            (new
-//            {
-//                code = dto.phoneNumber.Substring(dto.phoneNumber.Length - 6)
-//            });
-//    }
-//    catch (Exception e)
-//    {
-//        return Results.BadRequest($"mobile number is incorrect + {e}");
-//    }
-//});
-
-
-app.Run();
+    logger.Error(e, "Stopped program because of exception");
+    throw;
+}
+finally
+{
+    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+    LogManager.Shutdown();
+}

@@ -6,8 +6,8 @@ namespace cart.services.account_service.Repos
     public interface IAccountRepo
     {
         Task SaveChanges();
-        Task<int> CheckIn(CheckInOut dto);
-        void SetCheckInFailed(int id);
+        Task<int> CheckIn(Checkin dto);
+       
 
     }
 }
