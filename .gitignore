@@ -30,5 +30,5 @@
 /cart.services.sms_service/obj
 /CipherHelper/obj
 /CipherHelper/bin
-/LongPolling/obj
-/LongPolling/bin
+/cart.services.long_polling/obj
+/cart.services.long_polling/bin

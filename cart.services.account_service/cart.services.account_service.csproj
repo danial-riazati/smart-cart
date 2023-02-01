@@ -30,7 +30,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CipherHelper\CipherHelper.csproj" />
-    <ProjectReference Include="..\LongPolling\LongPolling.csproj" />
   </ItemGroup>
 
   <ItemGroup>
