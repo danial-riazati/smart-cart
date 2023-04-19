@@ -30,8 +30,6 @@ try
 
     var mySQLBuilder = new MySqlConnectionStringBuilder();
     mySQLBuilder.ConnectionString = builder.Configuration.GetConnectionString("MYSQLCONNECTION");
-   // mySQLBuilder.UserID = builder.Configuration["UserId"];
-   // mySQLBuilder.Password = builder.Configuration["Password"];
     logger.Info(mySQLBuilder.ConnectionString);
     builder.Services.AddDbContext<AccountDBContext>(opt => opt.UseMySQL(mySQLBuilder.ConnectionString));
     builder.Services.AddScoped<IAccountRepo, AccountRepo>();
@@ -84,6 +82,5 @@ catch (Exception e)
 }
 finally
 {
-    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
     LogManager.Shutdown();
 }
