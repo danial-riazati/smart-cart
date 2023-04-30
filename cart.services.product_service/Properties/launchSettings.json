@@ -12,10 +12,11 @@
     "cart.services.product_service": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:44087",
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "http://localhost:5153"
     },
     "IIS Express": {
       "commandName": "IISExpress",

@@ -15,6 +15,7 @@ namespace cart.services.cart_service.Repos
         public Task AddCart(Cart cart)
         {
             _context.Carts.Add(cart);
+            return Task.CompletedTask;
         }
 
         public void DeleteCart(int id)
