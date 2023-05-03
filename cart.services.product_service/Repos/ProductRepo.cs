@@ -25,26 +25,30 @@ namespace cart.services.product_service.Repos
             smartCartinfo = _context.SmartCartinfos.ToList();
         }
 
-        public async Task<string> GenerateProductSqlight()
+        public async Task<string> UpdateProductSqlite(string sqliteversion)
         {
             try
             {
-                
                 var product = _context.Products.ToList();
                 var storeDbversion = smartCartinfo.Where(b => b.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue;
+
                 string fileName = "Product" + storeDbversion + ".sqlite";
-                File.Delete(Path.Combine(Directory.GetCurrentDirectory(), fileName));
-                string connectionString = "Data Source="+ fileName + ";Version=3;";
-                SQLiteConnection connection = new SQLiteConnection(connectionString);
-                connection.Open();
-                string createTableQuery = "CREATE TABLE IF NOT EXISTS Product (Id INTEGER PRIMARY KEY , Name TEXT, Description TEXT , Price TEXT , ImageUrl TEXT , Barcode TEXT)";
-                SQLiteCommand createcommand = new SQLiteCommand(createTableQuery, connection);
-                createcommand.ExecuteNonQuery();
-                foreach (var item in product)
+                string destinationFile = Path.Combine(smartCartinfo.Where(b => b.DataName.Equals("VersionFolderUrl")).FirstOrDefault().DataValue, fileName);
+                if (System.IO.File.Exists(destinationFile))
+                    File.Delete(destinationFile);
+                string connectionString = "Data Source=" + destinationFile + ";Version=3;";
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
-                    using (var insertCommand = new SQLiteCommand("INSERT INTO Product (Id , Name , Description , Price , ImageUrl , Barcode) VALUES (@id ,@name , @description ,  @price , @imageUrl , @barcode) ", connection))
+                    connection.Open();
+                    string createTableQuery = "CREATE TABLE IF NOT EXISTS Product (Id INTEGER PRIMARY KEY , Name TEXT, Description TEXT , Price TEXT , ImageUrl TEXT , Barcode TEXT)";
+                    SQLiteCommand createcommand = new SQLiteCommand(createTableQuery, connection);
+                    createcommand.ExecuteNonQuery();
+                    createcommand.Dispose();
+                    foreach (var item in product)
                     {
-                        insertCommand.Parameters.AddRange(new[] {
+                        using (var insertCommand = new SQLiteCommand("INSERT INTO Product (Id , Name , Description , Price , ImageUrl , Barcode) VALUES (@id ,@name , @description ,  @price , @imageUrl , @barcode) ", connection))
+                        {
+                            insertCommand.Parameters.AddRange(new[] {
                                      new SQLiteParameter("@id", item.Id),
                                      new SQLiteParameter("@name", item.Name),
                                      new SQLiteParameter("@description", item.Description),
@@ -52,23 +56,15 @@ namespace cart.services.product_service.Repos
                                      new SQLiteParameter("@imageUrl", item.ImageUrl),
                                      new SQLiteParameter("@barcode", item.Barcode),
                         });
-                        insertCommand.ExecuteNonQuery();
+                            insertCommand.ExecuteNonQuery();
+                            insertCommand.Dispose();
+                        }
                     }
+                    connection.Close();
                 }
-                string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), fileName); 
-                string destinationFile = Path.Combine(smartCartinfo.Where(b => b.DataName.Equals("VersionFolderUrl")).FirstOrDefault().DataValue , fileName) ;
-                File.Copy(sourceFile, destinationFile, true);
-                connection.Close(); 
-                //File.Delete(sourceFile);
-
-
-                _context.SmartCartinfos.Where(b => b.DataName.Equals("SqlightVersion")).FirstOrDefault().DataValue = storeDbversion;
-                _context.SaveChanges();
-                GetSmartCartinfos();
                 AddVersion(fileName);
-                return "done";
-
-
+                sqliteversion = storeDbversion;
+                return sqliteversion;
 
             }
             catch (Exception e)
@@ -77,41 +73,22 @@ namespace cart.services.product_service.Repos
             }
 
         }
-        public HttpResponseMessage DownloadFile(string filePath)
-        {
-            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+        public string GetVersionUrl(string version) => _context.Versions.Where(a => a.VersionName.Equals("product" + version + ".sqlite")).FirstOrDefault().Url;
+        
+        public bool CheckVersion(string sqliteversion) => sqliteversion.Equals(smartCartinfo.Where(b => b.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue);
 
-            byte[] fileContent = File.ReadAllBytes(filePath);
+        public string GetLatestVersion() => _context.Versions.OrderByDescending(a => a.VersionNumber).FirstOrDefault().VersionNumber;
 
-            response.Content = new ByteArrayContent(fileContent);
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
-            response.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
-            {
-                FileName = Path.GetFileName(filePath)
-            };
-
-            return response;
-        }
-        public string GetsqlightVersion() => _context.SmartCartinfos.Where(a => a.DataName.Equals("SqlightVersion")).FirstOrDefault().DataValue;
-        public string GetStoreDbVersion() => _context.SmartCartinfos.Where(a => a.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue;
-        public string GetVersionUrl(string version)
-        {
-            var name = "product" + version;
-            return _context.Versions.Where(a=>a.VersionName.Equals(name)).FirstOrDefault().Url;
-        } 
-        public bool CheckVersion()
-        {
-            var sqlightversion = _context.SmartCartinfos.Where(a => a.DataName.Equals("SqlightVersion")).FirstOrDefault().DataValue;
-            var storeDbversion = _context.SmartCartinfos.Where(b => b.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue;
-            return sqlightversion.Equals(storeDbversion);
-        }
         public void AddVersion(string filename)
         {
-            var versionNumber = filename.Substring(7);
-            var version = new DataProvide.Version(filename,versionNumber , DateTime.Now, smartCartinfo.Where(b => b.DataName.Equals("VersionFolderUrl")).FirstOrDefault().DataValue);
-            _context.Versions.Add(version);
-            _context.SaveChanges();
+            var allversions = _context.Versions.Select(a => a.VersionNumber).ToList();
+            var versionNumber = filename.Substring(7).Replace(".sqlite", "");
+            if (!allversions.Contains(versionNumber))
+            {
+                var version = new DataProvide.Version(filename, versionNumber, DateTime.Now, smartCartinfo.Where(b => b.DataName.Equals("VersionFolderUrl")).FirstOrDefault().DataValue + "\\" + filename);
+                _context.Versions.Add(version);
+                _context.SaveChanges();
+            }
         }
-
     }
 }

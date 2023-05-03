@@ -4,6 +4,10 @@ using System.IO;
 using System.Net.Http.Headers;
 using cart.services.product_service.Repos;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using cart.services.product_service.Models.DTOs;
+using Microsoft.AspNetCore.Hosting.Server.Features;
 
 namespace cart.services.product_service.Controllers
 {
@@ -18,42 +22,39 @@ namespace cart.services.product_service.Controllers
         }
 
         [HttpGet]
-        public IActionResult DownloadSqlightFile()
+        public async Task<IActionResult> DownloadSqliteFile()
         {
-
-            while (!_productRepo.CheckVersion())
-            {
-                _productRepo.GenerateProductSqlight();
-            }
-            var sqlversion = _productRepo.GetsqlightVersion();
-
-            string filename = "Product" + sqlversion + ".sqlite";
-            //string filePath = Path.Combine(_productRepo.GetVersionUrl(sqlversion), filename);
-
-            string filePath = _productRepo.GetVersionUrl(sqlversion);
+            var sqliteversion = _productRepo.GetLatestVersion();
+            if (!_productRepo.CheckVersion(sqliteversion))
+                sqliteversion =await _productRepo.UpdateProductSqlite(sqliteversion);
+            string filename = "Product" + sqliteversion + ".sqlite";
+            string filePath = _productRepo.GetVersionUrl(sqliteversion);
 
             if (!System.IO.File.Exists(filePath))
-            {
                 return NotFound();
-            }
 
             var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-
             return File(fileStream, "application/octet-stream", filename);
         }
+
         [HttpGet]
-        public string GetStoreDBVersion()
+        public IActionResult CheckVersion(string sqliteversion)
         {
-            return _productRepo.GetStoreDbVersion();
+            CheckVersionDTO dto = new();
+            var connection = HttpContext.Connection;
+            var downloadUrl = $"http://{connection.LocalIpAddress}:{connection.LocalPort}/api/Product/DownloadSqliteFile";
+            dto.DownloadUrl = downloadUrl;
 
-        }
-        [HttpPost]
-        public async Task<IActionResult> UpdateSqlightFile()
-        {
-            _productRepo.GenerateProductSqlight();
-            return Ok();
+            if (!_productRepo.CheckVersion(sqliteversion))
+            {
+                _productRepo.UpdateProductSqlite(sqliteversion);
+                dto.Message = "Your db is not up to date. ";
+            }
+            else dto.Message = "Your db is up to date. ";
 
+            return Ok(dto);
         }
+
 
     }
 }

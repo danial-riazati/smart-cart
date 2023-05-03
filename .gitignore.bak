@@ -22,7 +22,6 @@
 /cart.services.payment_service/bin
 /cart.services.product_service/obj
 /cart.services.product_service/bin
-/cart.services.product_service/Versions
 /cart.services.failure_report_service/bin
 /cart.services.failure_report_service/obj
 /cart.services.invoice_service/bin
