@@ -53,10 +53,7 @@ namespace cart.core.api.Services
             {
                 Console.WriteLine($"Error handling client: {ex.Message}");
             }
-            finally
-            {
-                client.Close();
-            }
+         
         }
         private async Task SendResponseAsync(NetworkStream stream, string message)
         {
