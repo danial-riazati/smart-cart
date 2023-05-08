@@ -4,18 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cart.core.api.Controllers
 {
+
     [ApiController]
     [Route("[controller]")]
-    public class WeightController : ControllerBase
+    public class BarcodeController : ControllerBase
     {
-        private readonly IWeightRepo _repo;
+        private readonly IBarcodeRepo _repo;
         [HttpPost]
-        [Route("postWeight")]
-        public async Task<IActionResult> RecieveWeight(WeightDto info)
+        [Route("postBarcode")]
+        public async Task<IActionResult> RecieveBarcode(BarcodeDto info)
         {
             try
             {
-                var res =  _repo.PostWeight(info);
+                var res =  _repo.PostBarcode(info);
                 return Ok(res);
 
             }
@@ -25,5 +26,7 @@ namespace cart.core.api.Controllers
             }
 
         }
+
+
     }
 }

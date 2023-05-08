@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace cart.core.api
+namespace cart.core.api.Services
 {
-    public class BarcodeTcpServer
+    public class CameraTcpServer
     {
         private readonly int _port;
         private readonly TcpListener _listener;
         private readonly Func<TcpClient, Task> _handler;
-
-        public BarcodeTcpServer(int port, Func<TcpClient, Task> handler)
+        string[] recieveData = new string[1024];
+        int dataSize = 0;
+        public CameraTcpServer(int port, Func<TcpClient, Task> handler)
         {
             _port = port;
             _handler = handler;
@@ -43,6 +45,7 @@ namespace cart.core.api
             catch (Exception ex)
             {
                 Console.Error.WriteLine(ex);
+              
             }
             finally
             {

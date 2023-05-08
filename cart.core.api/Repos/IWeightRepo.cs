@@ -1,7 +1,9 @@
-﻿namespace cart.core.api.Repos
+﻿using cart.core.api.Dtos;
+
+namespace cart.core.api.Repos
 {
     public interface IWeightRepo
     {
-        Task<bool> RecieveWeightData(string Weight);
+        bool PostWeight(WeightDto info);
     }
 }
