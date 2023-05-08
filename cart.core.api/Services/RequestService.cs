@@ -5,30 +5,30 @@ using System.Threading.Tasks;
 using cart.core.api.Models;
 using Newtonsoft.Json;
 
-namespace cart.core.api.Repos
+namespace cart.core.api.Services
 {
 
-    public class RequestRepo
+    public class RequestService
     {
         private readonly HttpClient _httpClient;
-        public RequestRepo(HttpClient httpClient)
+        public RequestService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
-       
+
 
         public async Task<HttpResponseMessage> PostDataAsync(string id)
         {
-            var datamodel = new { id = id };
+            var datamodel = new { id };
             string myDataModelJson = System.Text.Json.JsonSerializer.Serialize(datamodel);
             var content = new StringContent(myDataModelJson, Encoding.UTF8, "application/json");
             return await _httpClient.PostAsync("http://10.51.10.137:6060/", content);
         }
 
-        public async Task DeleteJsonObject(int id)
+        public async Task<bool> DeleteJsonObject(int id)
         {
             var url = "http://10.51.10.137:6060/";
-            var data = new { id = id };
+            var data = new { id };
             var json = JsonConvert.SerializeObject(data);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var request = new HttpRequestMessage
@@ -42,10 +42,12 @@ namespace cart.core.api.Repos
             if (response.IsSuccessStatusCode)
             {
                 Console.WriteLine("Object deleted successfully.");
+                return true;
             }
             else
             {
                 Console.WriteLine($"Failed to delete object: {response.StatusCode}");
+                return false;
             }
         }
 

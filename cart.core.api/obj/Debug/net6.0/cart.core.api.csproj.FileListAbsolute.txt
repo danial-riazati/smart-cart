@@ -30,3 +30,4 @@ C:\Users\m.ramezani\Source\Repos\smart-cart\cart.core.api\obj\Debug\net6.0\refin
 C:\Users\m.ramezani\Source\Repos\smart-cart\cart.core.api\obj\Debug\net6.0\cart.core.api.pdb
 C:\Users\m.ramezani\Source\Repos\smart-cart\cart.core.api\obj\Debug\net6.0\cart.core.api.genruntimeconfig.cache
 C:\Users\m.ramezani\Source\Repos\smart-cart\cart.core.api\obj\Debug\net6.0\ref\cart.core.api.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\Newtonsoft.Json.dll

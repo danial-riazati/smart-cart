@@ -14,6 +14,7 @@ namespace cart.core.api.Repos
         public bool PostWeight(WeightDto info)
         {
             WeighQueue.Enqueue(info);
+           
 
             return true;
         }
