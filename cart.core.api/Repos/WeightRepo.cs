@@ -22,7 +22,7 @@ namespace cart.core.api.Repos
             var itemId=GetLastItemFromCameraQueue();
             HttpClient httpClient = new HttpClient();
             requestService = new RequestService(httpClient);
-            //string itemId = _server.GetNextEvent();
+            string id = _server.GetNextEvent();
             return true;
         }
         public WeightDto GetNextEvent()
