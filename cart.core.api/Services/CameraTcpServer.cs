@@ -21,6 +21,7 @@ namespace cart.core.api.Services
             _handler = handler;
             _listener = new TcpListener(IPAddress.Any, port);
         }
+        public CameraTcpServer() { }
 
         public async Task Start()
         {
@@ -71,6 +72,10 @@ namespace cart.core.api.Services
             {
                 return "No data received yet.";
             }
+        }
+        public string GetNextEvent()
+        {
+            return itmeQueue.Dequeue();
         }
     }
 }
