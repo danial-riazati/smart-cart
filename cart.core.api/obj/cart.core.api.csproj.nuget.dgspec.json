@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m.ramezani\\Source\\Repos\\smart-cart\\cart.core.api\\cart.core.api.csproj": {}
+    "C:\\Users\\m.ramezani\\source\\repos\\smart-cart\\cart.core.api\\cart.core.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m.ramezani\\Source\\Repos\\smart-cart\\cart.core.api\\cart.core.api.csproj": {
+    "C:\\Users\\m.ramezani\\source\\repos\\smart-cart\\cart.core.api\\cart.core.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.ramezani\\Source\\Repos\\smart-cart\\cart.core.api\\cart.core.api.csproj",
+        "projectUniqueName": "C:\\Users\\m.ramezani\\source\\repos\\smart-cart\\cart.core.api\\cart.core.api.csproj",
         "projectName": "cart.core.api",
-        "projectPath": "C:\\Users\\m.ramezani\\Source\\Repos\\smart-cart\\cart.core.api\\cart.core.api.csproj",
+        "projectPath": "C:\\Users\\m.ramezani\\source\\repos\\smart-cart\\cart.core.api\\cart.core.api.csproj",
         "packagesPath": "C:\\Users\\m.ramezani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.ramezani\\Source\\Repos\\smart-cart\\cart.core.api\\obj\\",
+        "outputPath": "C:\\Users\\m.ramezani\\source\\repos\\smart-cart\\cart.core.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -44,32 +44,17 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -23,3 +24,17 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+var server = new TcpServer(1302, async client =>
+{
+    // Handle client connection
+    using var stream = client.GetStream();
+    var buffer = new byte[1024];
+    var bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+    var request = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+
+    // Process request
+    var response = $"Hello, {request}!";
+    var outputBuffer = Encoding.ASCII.GetBytes(response);
+    await stream.WriteAsync(outputBuffer, 0, outputBuffer.Length);
+});
+await server.Start();

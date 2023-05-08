@@ -1,6 +1,9 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Net.WebSockets;
+using System.Threading;
+using System.Threading.Tasks;
 
 class Program
 {
@@ -34,22 +37,7 @@ class Program
                         dataSize++;
                         Console.WriteLine("Received: {0}", received);
                     }
-                    if(count==0)
-                    {
-                        try
-                        {
-                            Console.WriteLine("Reconnecting...");
-                            client = new TcpClient("localhost", 1302);
-                            stream = client.GetStream();
-                            Console.WriteLine("Client reconnected!");
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine("Error: {0}", e.Message);
-                            Thread.Sleep(5000);
-                        }
-
-                    }
+                  
                 }
 
                 Console.WriteLine("Client disconnected.");

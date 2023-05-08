@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = card.core
-build_property.ProjectDir = C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\
+build_property.ProjectDir = C:\Users\m.ramezani\source\repos\smart-cart\card.core\
