@@ -8,6 +8,7 @@ namespace cart.core.api.Dtos
         //public string weight { get; set; }
         public int isAdded { get; set; }
         //public int status { get; set; }
+        public double weight { get; set; }
 
 
     }

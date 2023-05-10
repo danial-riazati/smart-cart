@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using cart.core.api.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace cart.core.api.Services
@@ -17,12 +18,15 @@ namespace cart.core.api.Services
         }
 
 
-        public async Task<HttpResponseMessage> PostDataAsync(string id)
+        public async Task<bool> PostDataAsync(string input)
         {
-            var datamodel = new { id };
+            var datamodel = new { input };
             string myDataModelJson = System.Text.Json.JsonSerializer.Serialize(datamodel);
             var content = new StringContent(myDataModelJson, Encoding.UTF8, "application/json");
-            return await _httpClient.PostAsync("http://10.51.10.137:6060/", content);
+            var response= await _httpClient.PostAsync("http://10.51.10.137:6060/", content);
+            if (response.IsSuccessStatusCode)
+                return true;
+            else return false;   
         }
 
         public async Task<bool> DeleteJsonObject(int id)

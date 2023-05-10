@@ -9,8 +9,15 @@ namespace cart.core.api.Controllers
     public class WeightController : ControllerBase
     {
         private readonly IWeightRepo _repo;
+
+        public WeightController(IWeightRepo repo)
+        {
+            _repo = repo;
+
+        }
         [HttpPost]
         [Route("postWeight")]
+      
         public async Task<IActionResult> RecieveWeight(WeightDto info)
         {
             try

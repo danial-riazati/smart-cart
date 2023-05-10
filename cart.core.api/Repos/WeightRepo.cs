@@ -18,12 +18,27 @@ namespace cart.core.api.Repos
         }
         public bool PostWeight(WeightDto info)
         {
-            WeighQueue.Enqueue(info);
-            var itemId=GetLastItemFromCameraQueue();
+            string itemId=null;
+            if (info.isAdded == 1)
+            {
+                WeighQueue.Enqueue(info);
+                 itemId = GetLastItemFromCameraQueue();
+              
+            }
+            else if(info.isAdded==0)
+            {
+                WeighQueue.Enqueue(info);
+                Thread.Sleep(5000);
+                itemId = GetLastItemFromCameraQueue(); 
+            }
+            else 
+                return false;
             HttpClient httpClient = new HttpClient();
             requestService = new RequestService(httpClient);
-            string id = _server.GetNextEvent();
-            return true;
+            if (requestService.PostDataAsync(itemId).Result)
+                return true;
+            else return false;
+
         }
         public WeightDto GetNextEvent()
         {
@@ -35,7 +50,12 @@ namespace cart.core.api.Repos
         }
         public string GetLastItemFromCameraQueue()
         {
-            return _server.GetNextEvent();
+            string itemId= _server.GetNextEvent();
+            if(itemId==null)
+            {
+                return "lock";
+            }else
+                return itemId;
         }
     }
 }
