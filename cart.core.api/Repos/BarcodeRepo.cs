@@ -1,13 +1,17 @@
-﻿using cart.core.api.Dtos;
+﻿using cart.core.api.DataProvide;
+using cart.core.api.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace cart.core.api.Repos
 {
     public class BarcodeRepo : IBarcodeRepo
     {
         private static Queue<BarcodeQueueDto> _barcodeQueue  = new Queue<BarcodeQueueDto>();
-        public bool PostBarcode(BarcodeDto info)
+        private readonly ProductDbContext _context;
+        public async Task<bool>  PostBarcode(BarcodeDto info)
         {
+         
             BarcodeQueueDto barcodeQueueDto= new BarcodeQueueDto();
             barcodeQueueDto.time = DateTime.Now;
             barcodeQueueDto.barcode = info.barcode;

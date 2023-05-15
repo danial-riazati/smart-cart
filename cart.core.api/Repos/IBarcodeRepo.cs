@@ -4,6 +4,6 @@ namespace cart.core.api.Repos
 {
     public interface IBarcodeRepo
     {
-        bool PostBarcode(BarcodeDto info);
+         Task<bool> PostBarcode(BarcodeDto info);
     }
 }

@@ -54,6 +54,31 @@ namespace cart.core.api.Services
                 return false;
             }
         }
+        public async Task<bool> DeleteJsonObject()
+        {
+            var url = "http://10.51.10.137:6060/";
+            var data = new { id = "?" };
+            var json = JsonConvert.SerializeObject(data);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Delete,
+                RequestUri = new Uri(url),
+                Content = content
+            };
+            var response = await _httpClient.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("Object deleted successfully.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Failed to delete object: {response.StatusCode}");
+                return false;
+            }
+        }
 
     }
 }

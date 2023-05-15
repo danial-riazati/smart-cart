@@ -4,5 +4,6 @@
     {
         public string barcode { get; set; }
         public DateTime time { get; set; }
+        public string itemId { get; set; }
     }
 }

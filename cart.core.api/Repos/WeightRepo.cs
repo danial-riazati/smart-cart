@@ -68,6 +68,7 @@ namespace cart.core.api.Repos
 
         public bool WeightAndBarcode(WeightDto info)
         {
+           
             try
             {
                 WeightQueueDto weightQueueDto = new WeightQueueDto();
@@ -81,7 +82,19 @@ namespace cart.core.api.Repos
                 item.time = DateTime.Now;
                 HttpClient httpClient = new HttpClient();
                 requestService = new RequestService(httpClient);
-                return true;
+                if (info.isAdded == 1)
+                {
+                    if (requestService.PostDataAsync(item.barcode).Result)
+                        return true;
+                    else return false;
+                   
+                }else if (info.isAdded == 0)
+                {
+                    if (requestService.DeleteJsonObject().Result)
+                        return true;
+                    else return false;
+                }
+                return false;
             }catch(Exception e)
             {
                 return false;
