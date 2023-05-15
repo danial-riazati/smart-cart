@@ -10,9 +10,14 @@ namespace cart.core.api.Controllers
     public class BarcodeController : ControllerBase
     {
         private readonly IBarcodeRepo _repo;
+        public BarcodeController(IBarcodeRepo repo)
+        {
+            _repo = repo;
+
+        }
         [HttpPost]
         [Route("postBarcode")]
-        public async Task<IActionResult> RecieveBarcode(BarcodeDto info)
+        public async Task<IActionResult> RecieveBarcode( BarcodeDto info)
         {
             try
             {

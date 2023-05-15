@@ -1,18 +1,27 @@
 ﻿using cart.core.api.Dtos;
+using Microsoft.AspNetCore.Mvc;
 
 namespace cart.core.api.Repos
 {
     public class BarcodeRepo : IBarcodeRepo
     {
-        public Queue<BarcodeDto> BarcodeQueue { get; } = new Queue<BarcodeDto>();
+        private static Queue<BarcodeQueueDto> _barcodeQueue  = new Queue<BarcodeQueueDto>();
         public bool PostBarcode(BarcodeDto info)
         {
-            BarcodeQueue.Enqueue(info);
+            BarcodeQueueDto barcodeQueueDto= new BarcodeQueueDto();
+            barcodeQueueDto.time = DateTime.Now;
+            barcodeQueueDto.barcode = info.barcode;
+            _barcodeQueue.Enqueue(barcodeQueueDto);
+            BarcodeQueueDto[] arr = _barcodeQueue.ToArray();
             return true;
         }
-        public BarcodeDto GetNextEvent()
+        public BarcodeQueueDto GetNextEvent()
         {
-            return BarcodeQueue.Dequeue();
+            return _barcodeQueue.Dequeue();
+        }
+        public Queue<BarcodeQueueDto> getQueue()
+        {
+            return _barcodeQueue;
         }
     }
 }

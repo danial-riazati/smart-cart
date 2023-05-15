@@ -20,7 +20,7 @@ namespace cart.core.api.Services
 
         public async Task<bool> PostDataAsync(string input)
         {
-            var datamodel = new { input };
+            var datamodel = new { id=input };
             string myDataModelJson = System.Text.Json.JsonSerializer.Serialize(datamodel);
             var content = new StringContent(myDataModelJson, Encoding.UTF8, "application/json");
             var response= await _httpClient.PostAsync("http://10.51.10.137:6060/", content);
@@ -29,10 +29,10 @@ namespace cart.core.api.Services
             else return false;   
         }
 
-        public async Task<bool> DeleteJsonObject(int id)
+        public async Task<bool> DeleteJsonObject(string id)
         {
             var url = "http://10.51.10.137:6060/";
-            var data = new { id };
+            var data = new { id=id };
             var json = JsonConvert.SerializeObject(data);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var request = new HttpRequestMessage

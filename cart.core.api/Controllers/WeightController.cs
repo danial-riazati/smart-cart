@@ -32,5 +32,22 @@ namespace cart.core.api.Controllers
             }
 
         }
+        [HttpPost]
+        [Route("WeightAndBarcode")]
+
+        public async Task<IActionResult> WeightAndBarcode(WeightDto info)
+        {
+            try
+            {
+                var res = _repo.WeightAndBarcode(info);
+                return Ok(res);
+
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message + ex.StackTrace);
+            }
+
+        }
     }
 }

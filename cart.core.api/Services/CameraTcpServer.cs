@@ -34,6 +34,7 @@ namespace cart.core.api.Services
             }
         }
 
+
         public void Stop()
         {
             _listener.Stop();
@@ -48,6 +49,7 @@ namespace cart.core.api.Services
                 int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                 string data = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                 itmeQueue.Enqueue(data);
+                string[] queueItems = itmeQueue.ToArray();
                 await SendResponseAsync(stream, "Data received.");
             }
             catch (Exception ex)
