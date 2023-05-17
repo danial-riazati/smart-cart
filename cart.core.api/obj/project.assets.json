@@ -628,6 +628,19 @@
           }
         }
       },
+      "NLog/5.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Portable.BouncyCastle/1.9.0": {
         "type": "package",
         "compile": {
@@ -2967,6 +2980,30 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "NLog/5.1.4": {
+      "sha512": "Ki0XThITEd//RrQ21yi1HB/Uid4pzTRE5YLvEpk91d0vDXp3OPtVCvWgrYsqqcpTwiipFSOLSsU1RblaexrFiA==",
+      "type": "package",
+      "path": "nlog/5.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "nlog.5.1.4.nupkg.sha512",
+        "nlog.nuspec"
       ]
     },
     "Portable.BouncyCastle/1.9.0": {
@@ -6746,6 +6783,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.4",
       "MySql.EntityFrameworkCore >= 7.0.2",
+      "NLog >= 5.1.4",
       "Newtonsoft.Json >= 13.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -6815,6 +6853,10 @@
           "MySql.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.2, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[5.1.4, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

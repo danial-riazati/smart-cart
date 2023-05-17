@@ -20,6 +20,7 @@ namespace cart.core.api.Controllers
       
         public async Task<IActionResult> RecieveWeight(WeightDto info)
         {
+           
             try
             {
                 var res =  _repo.PostWeight(info);
@@ -37,6 +38,7 @@ namespace cart.core.api.Controllers
 
         public async Task<IActionResult> WeightAndBarcode(WeightDto info)
         {
+            Console.WriteLine("recieve weight");
             try
             {
                 var res = _repo.WeightAndBarcode(info);

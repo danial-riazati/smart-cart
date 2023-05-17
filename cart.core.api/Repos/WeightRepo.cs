@@ -77,21 +77,31 @@ namespace cart.core.api.Repos
                 _weighQueue.Enqueue(weightQueueDto);
                 var barcodeQueue = _repository.getQueue();
                 var item = barcodeQueue.Dequeue();
+              
                 if (item == null)
                     item.barcode = "lock";
+                Console.WriteLine($"barcode :{item.barcode}");
                 item.time = DateTime.Now;
                 HttpClient httpClient = new HttpClient();
                 requestService = new RequestService(httpClient);
                 if (info.isAdded == 1)
                 {
                     if (requestService.PostDataAsync(item.barcode).Result)
+                    {
+                        Console.WriteLine($"post sent");
                         return true;
+                    }
+                       
                     else return false;
                    
                 }else if (info.isAdded == 0)
                 {
                     if (requestService.DeleteJsonObject().Result)
+                    {
+                        Console.WriteLine($"delete sent");
                         return true;
+                    }
+                        
                     else return false;
                 }
                 return false;
@@ -99,10 +109,6 @@ namespace cart.core.api.Repos
             {
                 return false;
             }
-         
-
-            
-
 
         }
     }

@@ -1,0 +1,2 @@
+2023-05-17 10:36:40.1889|INFO|cart.core.api.Controllers.BarcodeController|barcode api recieved
+2023-05-17 10:36:43.5598|INFO|cart.core.api.Repos.BarcodeRepo|barcode added in the queue

@@ -20,7 +20,11 @@ builder.Services.AddSingleton<CameraTcpServer>(new CameraTcpServer(1302, async c
     await stream.WriteAsync(outputBuffer, 0, outputBuffer.Length);
 }));
 // Add services to the container.
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CORSPolicy", builder => builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((hosts) => true));
+}
+);
 builder.Services.AddControllers();
 builder.Services.AddScoped<IWeightRepo, WeightRepo>();
 builder.Services.AddScoped<IBarcodeRepo, BarcodeRepo>();
@@ -38,11 +42,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true)
+                .AllowCredentials());
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

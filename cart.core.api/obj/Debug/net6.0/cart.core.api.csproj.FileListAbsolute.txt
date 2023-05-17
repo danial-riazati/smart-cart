@@ -78,3 +78,5 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\runti
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\NLog.config
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Debug\net6.0\NLog.dll
