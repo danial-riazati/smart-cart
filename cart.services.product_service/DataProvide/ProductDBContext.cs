@@ -17,7 +17,7 @@ namespace cart.services.product_service.DataProvide
         {
         }
 
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<SmartCartinfo> SmartCartinfos { get; set; }
         public virtual DbSet<Version> Versions { get; set; }
 
@@ -32,19 +32,29 @@ namespace cart.services.product_service.DataProvide
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>(entity =>
+            modelBuilder.Entity<Item>(entity =>
             {
-                entity.ToTable("Product");
+                entity.ToTable("Item");
 
-                entity.Property(e => e.Barcode).HasMaxLength(200);
+                entity.Property(e => e.Id)
+                    .HasMaxLength(100)
+                    .HasColumnName("id");
 
-                entity.Property(e => e.Description).HasMaxLength(200);
+                entity.Property(e => e.Bytes)
+                    .HasMaxLength(255)
+                    .HasColumnName("bytes");
 
-                entity.Property(e => e.ImageUrl).HasMaxLength(100);
+                entity.Property(e => e.Description)
+                    .HasMaxLength(200)
+                    .HasColumnName("description");
 
-                entity.Property(e => e.Name).HasMaxLength(45);
+                entity.Property(e => e.Name)
+                    .HasMaxLength(100)
+                    .HasColumnName("name");
 
-                entity.Property(e => e.Price).HasMaxLength(45);
+                entity.Property(e => e.Price)
+                    .HasMaxLength(45)
+                    .HasColumnName("price");
             });
 
             modelBuilder.Entity<SmartCartinfo>(entity =>

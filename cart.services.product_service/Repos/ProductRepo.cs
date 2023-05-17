@@ -29,7 +29,7 @@ namespace cart.services.product_service.Repos
         {
             try
             {
-                var product = _context.Products.ToList();
+                var product = _context.Items.ToList();
                 var storeDbversion = smartCartinfo.Where(b => b.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue;
 
                 string fileName = "Product" + storeDbversion + ".sqlite";
@@ -40,21 +40,20 @@ namespace cart.services.product_service.Repos
                 using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
                     connection.Open();
-                    string createTableQuery = "CREATE TABLE IF NOT EXISTS Product (Id INTEGER PRIMARY KEY , Name TEXT, Description TEXT , Price TEXT , ImageUrl TEXT , Barcode TEXT)";
+                    string createTableQuery = "CREATE TABLE IF NOT EXISTS Product (id TEXT PRIMARY KEY , name TEXT, description TEXT , price TEXT , bytes TEXT )";
                     SQLiteCommand createcommand = new SQLiteCommand(createTableQuery, connection);
                     createcommand.ExecuteNonQuery();
                     createcommand.Dispose();
                     foreach (var item in product)
                     {
-                        using (var insertCommand = new SQLiteCommand("INSERT INTO Product (Id , Name , Description , Price , ImageUrl , Barcode) VALUES (@id ,@name , @description ,  @price , @imageUrl , @barcode) ", connection))
+                        using (var insertCommand = new SQLiteCommand("INSERT INTO Product (id , name , description , price , bytes) VALUES (@id ,@name , @description ,  @price , @bytes ) ", connection))
                         {
                             insertCommand.Parameters.AddRange(new[] {
                                      new SQLiteParameter("@id", item.Id),
                                      new SQLiteParameter("@name", item.Name),
                                      new SQLiteParameter("@description", item.Description),
                                      new SQLiteParameter("@price", item.Price),
-                                     new SQLiteParameter("@imageUrl", item.ImageUrl),
-                                     new SQLiteParameter("@barcode", item.Barcode),
+                                     new SQLiteParameter("@bytes", item.Bytes),                                     
                         });
                             insertCommand.ExecuteNonQuery();
                             insertCommand.Dispose();
