@@ -1,7 +1,8 @@
 ﻿
 using cart.core.api.Dtos;
 using cart.core.api.Services;
-
+using NLog;
+using Microsoft.Extensions.Configuration;
 namespace cart.core.api.Repos
 {
     public class WeightRepo : IWeightRepo
@@ -10,6 +11,8 @@ namespace cart.core.api.Repos
         private readonly BarcodeRepo _repository =new BarcodeRepo();
         private readonly CameraTcpServer _server;
         private  RequestService requestService;
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
 
         //public WeightRepo(CameraTcpServer server)
         //{
@@ -77,18 +80,23 @@ namespace cart.core.api.Repos
                 _weighQueue.Enqueue(weightQueueDto);
                 var barcodeQueue = _repository.getQueue();
                 var item = barcodeQueue.Dequeue();
-              
+                _logger.Info($"barcode dequeued is :{item.barcode}");
                 if (item == null)
                     item.barcode = "lock";
                 Console.WriteLine($"barcode :{item.barcode}");
                 item.time = DateTime.Now;
                 HttpClient httpClient = new HttpClient();
-                requestService = new RequestService(httpClient);
+                var configuration = new ConfigurationBuilder()
+     .SetBasePath(Directory.GetCurrentDirectory())
+     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+     .Build();
+                requestService = new RequestService(httpClient,configuration);
                 if (info.isAdded == 1)
                 {
                     if (requestService.PostDataAsync(item.barcode).Result)
                     {
-                        Console.WriteLine($"post sent");
+                        _logger.Info($"post request sent");
+                        Console.WriteLine($"post request sent");
                         return true;
                     }
                        
@@ -98,7 +106,8 @@ namespace cart.core.api.Repos
                 {
                     if (requestService.DeleteJsonObject().Result)
                     {
-                        Console.WriteLine($"delete sent");
+                        _logger.Info($"delete request sent");
+                        Console.WriteLine($"delete request sent");
                         return true;
                     }
                         
@@ -107,6 +116,7 @@ namespace cart.core.api.Repos
                 return false;
             }catch(Exception e)
             {
+                _logger.Info($"exception in weightRepo :{e.Message}");
                 return false;
             }
 

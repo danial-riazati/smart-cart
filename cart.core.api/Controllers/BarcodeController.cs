@@ -23,7 +23,7 @@ namespace cart.core.api.Controllers
         [Route("postBarcode")]
         public async Task<IActionResult> RecieveBarcode( BarcodeDto info)
         {
-            Console.WriteLine(" barcode api recieved");
+            Console.WriteLine($" barcode api recieved ,barcode is {info.barcode}");
             _logger.Info("barcode api recieved");
             try
             {

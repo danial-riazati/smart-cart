@@ -364,3 +364,5 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\obj\Release\net6.0\lin
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\obj\Release\net6.0\linux-x64\cart.core.api.pdb
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\obj\Release\net6.0\linux-x64\cart.core.api.genruntimeconfig.cache
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\obj\Release\net6.0\linux-x64\ref\cart.core.api.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\NLog.config
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\NLog.dll
