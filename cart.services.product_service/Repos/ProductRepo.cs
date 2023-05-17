@@ -32,7 +32,7 @@ namespace cart.services.product_service.Repos
                 var product = _context.Items.ToList();
                 var storeDbversion = smartCartinfo.Where(b => b.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue;
 
-                string fileName = "Product" + storeDbversion + ".sqlite";
+                string fileName = "Item" + storeDbversion + ".sqlite";
                 string destinationFile = Path.Combine(smartCartinfo.Where(b => b.DataName.Equals("VersionFolderUrl")).FirstOrDefault().DataValue, fileName);
                 if (System.IO.File.Exists(destinationFile))
                     File.Delete(destinationFile);
@@ -40,13 +40,13 @@ namespace cart.services.product_service.Repos
                 using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
                     connection.Open();
-                    string createTableQuery = "CREATE TABLE IF NOT EXISTS Product (id TEXT PRIMARY KEY , name TEXT, description TEXT , price TEXT , bytes TEXT )";
+                    string createTableQuery = "CREATE TABLE IF NOT EXISTS Item (id TEXT PRIMARY KEY , name TEXT, description TEXT , price TEXT , bytes TEXT )";
                     SQLiteCommand createcommand = new SQLiteCommand(createTableQuery, connection);
                     createcommand.ExecuteNonQuery();
                     createcommand.Dispose();
                     foreach (var item in product)
                     {
-                        using (var insertCommand = new SQLiteCommand("INSERT INTO Product (id , name , description , price , bytes) VALUES (@id ,@name , @description ,  @price , @bytes ) ", connection))
+                        using (var insertCommand = new SQLiteCommand("INSERT INTO Item (id , name , description , price , bytes) VALUES (@id ,@name , @description ,  @price , @bytes ) ", connection))
                         {
                             insertCommand.Parameters.AddRange(new[] {
                                      new SQLiteParameter("@id", item.Id),
@@ -72,7 +72,7 @@ namespace cart.services.product_service.Repos
             }
 
         }
-        public string GetVersionUrl(string version) => _context.Versions.Where(a => a.VersionName.Equals("product" + version + ".sqlite")).FirstOrDefault().Url;
+        public string GetVersionUrl(string version) => _context.Versions.Where(a => a.VersionName.Equals("Item" + version + ".sqlite")).FirstOrDefault().Url;
         
         public bool CheckVersion(string sqliteversion) => sqliteversion.Equals(smartCartinfo.Where(b => b.DataName.Equals("StoreDbVersion")).FirstOrDefault().DataValue);
 
