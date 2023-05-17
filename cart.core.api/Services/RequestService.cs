@@ -27,7 +27,7 @@ namespace cart.core.api.Services
             string myDataModelJson = System.Text.Json.JsonSerializer.Serialize(datamodel);
             string endPointConfig = _configuration["BaseUrl"];
             var content = new StringContent(myDataModelJson, Encoding.UTF8, "application/json");
-            var response= await _httpClient.PostAsync("http://10.51.10.137:6060/", content);
+            var response= await _httpClient.PostAsync(endPointConfig, content);
             if (response.IsSuccessStatusCode)
                 return true;
             else return false;   
@@ -35,7 +35,7 @@ namespace cart.core.api.Services
 
         public async Task<bool> DeleteJsonObject(string id)
         {
-            var url = "http://10.51.10.137:6060/";
+            var url = _configuration["BaseUrl"];
             var data = new { id=id };
             var json = JsonConvert.SerializeObject(data);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -60,7 +60,7 @@ namespace cart.core.api.Services
         }
         public async Task<bool> DeleteJsonObject()
         {
-            var url = "http://10.51.10.137:6060/";
+            var url = _configuration["BaseUrl"];
             var data = new { id = "?" };
             var json = JsonConvert.SerializeObject(data);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
