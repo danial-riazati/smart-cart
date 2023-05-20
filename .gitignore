@@ -28,6 +28,8 @@
 /cart.services.invoice_service/obj
 /cart.services.sms_service/bin
 /cart.services.sms_service/obj
+/cart.core.api/bin
+/cart.core.api/obj
 /CipherHelper/obj
 /CipherHelper/bin
 /cart.services.long_polling/obj
