@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sqmU2QVdyB5mLWkVIFv0+csdPPpiRFSyqm4UlRseMx8=",
+  "Source": "cart.core.api",
+  "BasePath": "_content/cart.core.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
