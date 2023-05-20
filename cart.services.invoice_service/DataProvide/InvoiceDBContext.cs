@@ -19,7 +19,13 @@ namespace cart.services.invoice_service.DataProvide
 
         public virtual DbSet<Invoice> Invoices { get; set; }
 
-     
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseMySQL("Server=10.51.10.137;Port=3308;Database=InvoiceDB;Uid=user;Pwd=SM@RTcart");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,19 +33,9 @@ namespace cart.services.invoice_service.DataProvide
             {
                 entity.ToTable("Invoice");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Content).HasMaxLength(255);
 
-                entity.Property(e => e.Content)
-                    .IsRequired()
-                    .HasColumnName("content");
-
-                entity.Property(e => e.Date)
-                    .HasColumnType("date")
-                    .HasColumnName("date");
-
-                entity.Property(e => e.IsSucceed).HasColumnName("isSucceed");
-
-                entity.Property(e => e.TotalAmount).HasColumnName("totalAmount");
+                entity.Property(e => e.PhoneNumber).HasMaxLength(45);
             });
 
             OnModelCreatingPartial(modelBuilder);

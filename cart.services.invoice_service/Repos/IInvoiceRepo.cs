@@ -1,5 +1,6 @@
 ﻿using System;
 using cart.services.invoice_service.DataProvide;
+using cart.services.invoice_service.Model;
 
 namespace cart.services.invoice_service.Repos
 {
@@ -7,8 +8,10 @@ namespace cart.services.invoice_service.Repos
     {
         Task SaveChanges();
         Task<Invoice?> GetInvoice(int id);
-        void GetAllInvoicesSortByDate(int id);
-        void GetAllInvoicesSortByAmount(int id);
+        Task SaveInvoice(InvoiceDTO dto);
+
+        List<Invoice> GetAllInvoicesSortByDate();
+        List<Invoice> GetAllInvoicesSortByAmount();
 
     }
 }
