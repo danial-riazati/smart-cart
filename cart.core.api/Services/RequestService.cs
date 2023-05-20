@@ -29,13 +29,7 @@ namespace cart.core.api.Services
             var random = new Random();
             string myDataModelJson = System.Text.Json.JsonSerializer.Serialize(datamodel);
             req.Content = new StringContent(myDataModelJson, Encoding.UTF8, "application/json");
-
             var res = client.SendAsync(req).Result;
-
-
-
-            //var content = new StringContent(myDataModelJson, Encoding.UTF8, "application/json");
-            //var response= await _httpClient.PostAsync("http://localhost:6060", content);
             if (res.StatusCode != System.Net.HttpStatusCode.OK)
                 return true;
             else
