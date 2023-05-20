@@ -30,6 +30,8 @@
 /cart.services.sms_service/obj
 /cart.core.api/bin
 /cart.core.api/obj
+/card.core/bin
+/card.core/obj
 /CipherHelper/obj
 /CipherHelper/bin
 /cart.services.long_polling/obj
