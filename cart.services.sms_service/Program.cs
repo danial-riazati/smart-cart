@@ -8,7 +8,6 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         var SMSToken = builder.Configuration["SMSToken"];
-        var LineNumber = builder.Configuration["LineNumber"];
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
@@ -25,7 +24,7 @@ internal class Program
             {
                 var sms = new Ghasedak.Core.Api(SMSToken);
 
-                var result = await sms.SendSMSAsync($"message\n code:{dto.code}", dto.phoneNumber, linenumber: LineNumber);
+                var result = await sms.VerifyAsync(1, "radino", new string[] { dto.phoneNumber }, dto.code.ToString());
                 if (result.Result.Code == 200)
                 {
                     return Results.Ok();
