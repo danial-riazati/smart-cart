@@ -12,9 +12,12 @@
           "Microsoft.AspNet.WebApi.Core": "5.2.9",
           "Microsoft.EntityFrameworkCore.Design": "7.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.4",
-          "Microsoft.Extensions.Configuration": "7.0.0",
+          "Microsoft.Extensions.Http": "7.0.0",
           "MySql.EntityFrameworkCore": "7.0.2",
           "NLog": "5.1.4",
+          "NLog.Extensions.Logging": "5.2.3",
+          "NLog.Web": "5.2.3",
+          "NLog.Web.AspNetCore": "5.2.3",
           "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.2.3",
           "runtimepack.Microsoft.NETCore.App.Runtime.linux-x64": "6.0.13",
@@ -1082,6 +1085,10 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
           },
+          "Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.322.12309"
+          },
           "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1322.58013"
@@ -1121,10 +1128,6 @@
           "Microsoft.Extensions.Hosting.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
-          },
-          "Microsoft.Extensions.Http.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
           },
           "Microsoft.Extensions.Identity.Core.dll": {
             "assemblyVersion": "6.0.0.0",
@@ -1358,18 +1361,6 @@
           }
         }
       },
-      "Microsoft.Extensions.Configuration/7.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
-          "Microsoft.Extensions.Primitives": "7.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Configuration.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
-        }
-      },
       "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
@@ -1407,6 +1398,20 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "Microsoft.Extensions.Http/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Http.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
           }
@@ -1604,6 +1609,41 @@
           "lib/netstandard2.0/NLog.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.1.4.1703"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/5.2.3": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "NLog": "5.1.4"
+        },
+        "runtime": {
+          "lib/net6.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.3.325"
+          }
+        }
+      },
+      "NLog.Web/5.2.3": {
+        "dependencies": {
+          "NLog": "5.1.4"
+        },
+        "runtime": {
+          "lib/net46/NLog.Web.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.3.830"
+          }
+        }
+      },
+      "NLog.Web.AspNetCore/5.2.3": {
+        "dependencies": {
+          "NLog.Extensions.Logging": "5.2.3"
+        },
+        "runtime": {
+          "lib/net6.0/NLog.Web.AspNetCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.3.830"
           }
         }
       },
@@ -2659,13 +2699,6 @@
       "path": "microsoft.extensions.caching.memory/7.0.0",
       "hashPath": "microsoft.extensions.caching.memory.7.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.Configuration/7.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-tldQUBWt/xeH2K7/hMPPo5g8zuLc3Ro9I5d4o/XrxvxOCA2EZBtW7bCHHTc49fcBtvB8tLAb/Qsmfrq+2SJ4vA==",
-      "path": "microsoft.extensions.configuration/7.0.0",
-      "hashPath": "microsoft.extensions.configuration.7.0.0.nupkg.sha512"
-    },
     "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2693,6 +2726,13 @@
       "sha512": "sha512-oONNYd71J3LzkWc4fUHl3SvMfiQMYUCo/mDHDEu76hYYxdhdrPYv6fvGv9nnKVyhE9P0h20AU8RZB5OOWQcAXg==",
       "path": "microsoft.extensions.dependencymodel/7.0.0",
       "hashPath": "microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9Pq9f/CvOSz0t9yQa6g1uWpxa2sm13daLFm8EZwy9MaQUjKXWdNUXQwIxwhmba5N83UIqURiPHSNqGK1vfWF2w==",
+      "path": "microsoft.extensions.http/7.0.0",
+      "hashPath": "microsoft.extensions.http.7.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/7.0.0": {
       "type": "package",
@@ -2805,6 +2845,27 @@
       "sha512": "sha512-Ki0XThITEd//RrQ21yi1HB/Uid4pzTRE5YLvEpk91d0vDXp3OPtVCvWgrYsqqcpTwiipFSOLSsU1RblaexrFiA==",
       "path": "nlog/5.1.4",
       "hashPath": "nlog.5.1.4.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TB8zPGV2nVpvWq5C8zIVHPSmnzOHMrXppjsAwHcuJq1Ehs8sC0llnAv5Ysf5Lf/vew9amV/+01MohtRFSDzKdQ==",
+      "path": "nlog.extensions.logging/5.2.3",
+      "hashPath": "nlog.extensions.logging.5.2.3.nupkg.sha512"
+    },
+    "NLog.Web/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XTkC6FaX8+oWtw7n+vbYoNXREjvpnwHCvsHN/Y5BnMcR99dD/1Pv2cozN+b+bfaTucoRFFup+jSskCOLIt3oLw==",
+      "path": "nlog.web/5.2.3",
+      "hashPath": "nlog.web.5.2.3.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uP0KekbkswuMjo1dbaqu20TxH2Dc3ox2qJDIi837ob2Fq/BliZHuQY9nJdM3UArVrLrsl+xxsx0D6h8m3fOufg==",
+      "path": "nlog.web.aspnetcore/5.2.3",
+      "hashPath": "nlog.web.aspnetcore.5.2.3.nupkg.sha512"
     },
     "Portable.BouncyCastle/1.9.0": {
       "type": "package",

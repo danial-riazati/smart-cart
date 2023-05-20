@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NLog;
 
+
 namespace cart.core.api.Controllers
 {
 
@@ -12,11 +13,12 @@ namespace cart.core.api.Controllers
     public class BarcodeController : ControllerBase
     {
         private readonly IBarcodeRepo _repo;
-        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly ILogger<BarcodeController> _logger;
 
-        public BarcodeController(IBarcodeRepo repo)
+        public BarcodeController(IBarcodeRepo repo, ILogger<BarcodeController> logger)
         {
             _repo = repo;
+            _logger = logger;
 
         }
         [HttpPost]
@@ -24,17 +26,18 @@ namespace cart.core.api.Controllers
         public async Task<IActionResult> RecieveBarcode( BarcodeDto info)
         {
             Console.WriteLine($" barcode api recieved ,barcode is {info.barcode}");
-            _logger.Info("barcode api recieved");
+            _logger.LogInformation("barcode api recieved");
             try
             {
-                var res =  _repo.PostBarcode(info);
+                var res =  await _repo.PostBarcode(info);
                 return Ok(res);
 
             }
             catch (Exception ex)
             {
+                _logger.LogError($"exception in postBarcode:{ex.Message} ");
                 return Problem(ex.Message + ex.StackTrace);
-                _logger.Info($"exception in postBarcode:{ex.Message} ");
+                
 
             }
 

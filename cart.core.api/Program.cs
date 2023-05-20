@@ -4,8 +4,20 @@ using cart.core.api.Services;
 using System.Threading.Tasks;
 using System.Text;
 using cart.core.api.Repos;
+using NLog;
+using NLog.Web;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+
 
 var builder = WebApplication.CreateBuilder(args);
+ConfigurationManager configuration = builder.Configuration;
+var logger = NLog.LogManager.Setup()
+         .LoadConfigurationFromAppSettings()
+         .GetCurrentClassLogger();
+
+logger.Info("Starting the application");
 builder.Services.AddSingleton<CameraTcpServer>(new CameraTcpServer(1302, async client =>
 {
    
@@ -25,14 +37,21 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CORSPolicy", builder => builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((hosts) => true));
 }
 );
+
+
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IRequestService, RequestService>();
+builder.Services.AddScoped<ICameraTcpServer, CameraTcpServer>();
 builder.Services.AddScoped<IWeightRepo, WeightRepo>();
 builder.Services.AddScoped<IBarcodeRepo, BarcodeRepo>();
+builder.Services.AddHttpClient();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
 var tcpServer = app.Services.GetRequiredService<CameraTcpServer>();
 tcpServer.Start();
 
