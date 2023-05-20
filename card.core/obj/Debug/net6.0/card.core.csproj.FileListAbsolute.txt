@@ -1,0 +1,15 @@
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\bin\Debug\net6.0\card.core.exe
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\bin\Debug\net6.0\card.core.deps.json
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\bin\Debug\net6.0\card.core.runtimeconfig.json
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\bin\Debug\net6.0\card.core.dll
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\bin\Debug\net6.0\card.core.pdb
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.csproj.AssemblyReference.cache
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.AssemblyInfoInputs.cache
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.AssemblyInfo.cs
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.csproj.CoreCompileInputs.cache
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.dll
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\refint\card.core.dll
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.pdb
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\card.core.genruntimeconfig.cache
+C:\Users\m.ramezani\Source\Repos\smart-cart\card.core\obj\Debug\net6.0\ref\card.core.dll

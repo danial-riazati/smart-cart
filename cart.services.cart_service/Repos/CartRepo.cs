@@ -15,6 +15,7 @@ namespace cart.services.cart_service.Repos
         public Task AddCart(Cart cart)
         {
             _context.Carts.Add(cart);
+            throw new NotImplementedException();
         }
 
         public void DeleteCart(int id)

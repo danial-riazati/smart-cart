@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Text;
 using CipherHelper;
-using LongPolling;
+//using LongPolling;
 using cart.services.account_service.Models;
 using System.Text.RegularExpressions;
 
