@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace cart.services.invoice_service.DataProvide
+namespace cart.services.payment_service.DataProvide
 {
     public partial class Invoice
     {

@@ -1,9 +1,11 @@
 ﻿using cart.services.invoice_service.DataProvide;
+using cart.services.invoice_service.Model;
 using cart.services.invoice_service.Repos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MySql.Data.MySqlClient;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,12 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-var mySQLBuilder = new MySqlConnectionStringBuilder();
-mySQLBuilder.ConnectionString = builder.Configuration.GetConnectionString("MYSQLCONNECTION");
-mySQLBuilder.UserID = builder.Configuration["UserId"];
-mySQLBuilder.Password = builder.Configuration["Password"];
 
-builder.Services.AddDbContext<InvoiceDBContext>(opt => opt.UseMySQL(mySQLBuilder.ConnectionString));
+builder.Services.AddDbContext<InvoiceDBContext>(opt => opt.UseMySQL(builder.Configuration.GetConnectionString("MYSQLCONNECTION")));
 builder.Services.AddScoped<IInvoiceRepo, InvoiceRepo>();
 
 builder.Services.AddCors(options =>
@@ -33,7 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("invoice",async (IInvoiceRepo repo , [FromQuery] int id) =>
+app.MapGet("GetInvoice",async (IInvoiceRepo repo , [FromQuery] int id) =>
 {
 
     try
@@ -54,6 +52,27 @@ app.MapGet("invoice",async (IInvoiceRepo repo , [FromQuery] int id) =>
         return Results.Problem();
     }
    
+
+});
+app.MapPost("SaveInvoice", async (IInvoiceRepo repo, [FromBody] InvoiceDTO dto) =>
+{
+
+    try
+    {
+
+        if (dto == null)
+        {
+            return Results.NotFound();
+        }
+        await repo.SaveInvoice(dto);
+      
+        return Results.Ok();
+    }
+    catch (Exception e)
+    {
+        return Results.Problem();
+    }
+
 
 });
 

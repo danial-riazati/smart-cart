@@ -22,17 +22,12 @@
 /cart.services.payment_service/bin
 /cart.services.product_service/obj
 /cart.services.product_service/bin
-/cart.services.product_service/Versions
 /cart.services.failure_report_service/bin
 /cart.services.failure_report_service/obj
 /cart.services.invoice_service/bin
 /cart.services.invoice_service/obj
 /cart.services.sms_service/bin
 /cart.services.sms_service/obj
-/cart.core.api/bin
-/cart.core.api/obj
-/card.core/bin
-/card.core/obj
 /CipherHelper/obj
 /CipherHelper/bin
 /cart.services.long_polling/obj
