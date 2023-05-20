@@ -268,7 +268,6 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\lin
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Hosting.dll
-C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Http.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Identity.Core.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Localization.Abstractions.dll
@@ -317,6 +316,7 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\lin
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Http.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Logging.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Options.dll
@@ -328,6 +328,9 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\lin
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Newtonsoft.Json.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Newtonsoft.Json.Bson.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\NLog.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\NLog.Extensions.Logging.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\NLog.Web.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\NLog.Web.AspNetCore.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\BouncyCastle.Crypto.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
