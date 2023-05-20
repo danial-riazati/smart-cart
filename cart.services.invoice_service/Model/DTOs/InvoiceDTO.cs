@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
-
-namespace cart.services.invoice_service.DataProvide
+﻿namespace cart.services.invoice_service.Model
 {
-    public partial class Invoice
+    public class InvoiceDTO
     {
-        public int InvoiceId { get; set; }
+
+        public long InvoiceId { get; set; }
         public DateTime? Date { get; set; }
         public string PhoneNumber { get; set; }
         public string Content { get; set; }
         public int? IsSucceed { get; set; }
         public int? TotalAmount { get; set; }
+
     }
 }
