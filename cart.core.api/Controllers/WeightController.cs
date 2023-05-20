@@ -2,6 +2,7 @@
 using cart.core.api.Repos;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
+using Microsoft.Extensions.Logging;
 
 namespace cart.core.api.Controllers
 {
@@ -10,12 +11,13 @@ namespace cart.core.api.Controllers
     public class WeightController : ControllerBase
     {
         private readonly IWeightRepo _repo;
-        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly ILogger<WeightController> _logger;
 
 
-        public WeightController(IWeightRepo repo)
+        public WeightController(IWeightRepo repo, ILogger<WeightController> logger)
         {
             _repo = repo;
+            _logger = logger;
 
         }
         [HttpPost]
@@ -45,7 +47,7 @@ namespace cart.core.api.Controllers
 
         public async Task<IActionResult> WeightAndBarcode(WeightDto info)
         {
-            _logger.Info("weight api recieved");
+            _logger.LogInformation("weight api recieved");
             Console.WriteLine("recieve weight");
             try
             {
@@ -55,7 +57,7 @@ namespace cart.core.api.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Info($"exception in weight api : {ex.Message}");
+                _logger.LogError($"exception in weight api : {ex.Message}");
                 return Problem(ex.Message + ex.StackTrace);
             }
 

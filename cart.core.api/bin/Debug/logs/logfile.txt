@@ -13,3 +13,8 @@
 2023-05-17 15:23:07.7294|INFO|cart.core.api.Controllers.BarcodeController|barcode api recieved
 2023-05-17 15:23:08.2885|INFO|cart.core.api.Repos.BarcodeRepo|barcode added in the queue
 2023-05-17 15:23:08.9707|INFO|cart.core.api.Repos.BarcodeRepo|post request sent
+2023-05-17 17:06:15.3970|INFO|cart.core.api.Controllers.BarcodeController|barcode api recieved
+2023-05-17 17:06:20.7197|INFO|cart.core.api.Repos.BarcodeRepo|barcode added in the queue
+2023-05-17 17:07:44.0891|INFO|cart.core.api.Controllers.BarcodeController|barcode api recieved
+2023-05-17 17:07:49.1375|INFO|cart.core.api.Repos.BarcodeRepo|barcode added in the queue
+2023-05-17 17:08:00.7145|INFO|cart.core.api.Repos.BarcodeRepo|post request sent

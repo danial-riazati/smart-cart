@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace cart.core.api.Services
 {
-    public class CameraTcpServer
+    public class CameraTcpServer:ICameraTcpServer
     {
         private readonly int _port;
         private readonly TcpListener _listener;
@@ -40,7 +40,7 @@ namespace cart.core.api.Services
             _listener.Stop();
         }
 
-        private async Task HandleClientAsync(TcpClient client)
+        public async Task HandleClientAsync(TcpClient client)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace cart.core.api.Services
             }
          
         }
-        private async Task SendResponseAsync(NetworkStream stream, string message)
+        public async Task SendResponseAsync(NetworkStream stream, string message)
         {
             byte[] buffer = Encoding.UTF8.GetBytes(message);
             await stream.WriteAsync(buffer, 0, buffer.Length);
@@ -79,5 +79,7 @@ namespace cart.core.api.Services
         {
             return itmeQueue.Dequeue();
         }
+
+    
     }
 }

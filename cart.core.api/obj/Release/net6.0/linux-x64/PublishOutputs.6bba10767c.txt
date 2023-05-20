@@ -257,6 +257,7 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\lin
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.KeyPerFile.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.Xml.dll
+C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Features.dll
@@ -313,7 +314,6 @@ C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\lin
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\m.ramezani\source\repos\smart-cart\cart.core.api\bin\Release\net6.0\linux-x64\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll

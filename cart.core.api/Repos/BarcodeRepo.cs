@@ -4,6 +4,7 @@ using cart.core.api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NLog;
+using Microsoft.Extensions.Logging;
 
 
 namespace cart.core.api.Repos
@@ -12,8 +13,14 @@ namespace cart.core.api.Repos
     {
         private static Queue<BarcodeQueueDto> _barcodeQueue  = new Queue<BarcodeQueueDto>();
         private readonly ProductDbContext _context;
-        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private RequestService requestService;
+        private readonly ILogger<BarcodeRepo> _logger;
+        private readonly IRequestService _requestService;
+
+        public BarcodeRepo(IRequestService requestService, ILogger<BarcodeRepo> logger)
+        {
+            _requestService = requestService;
+            _logger = logger;
+        }
 
         public async Task<bool>  PostBarcode(BarcodeDto info)
         {
@@ -23,16 +30,14 @@ namespace cart.core.api.Repos
             barcodeQueueDto.barcode = info.barcode;
             _barcodeQueue.Enqueue(barcodeQueueDto);
             Console.WriteLine("barcode added in the queue");
-            _logger.Info("barcode added in the queue");
-            HttpClient httpClient = new HttpClient();
-            var configuration = new ConfigurationBuilder()
- .SetBasePath(Directory.GetCurrentDirectory())
- .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
- .Build();
-            requestService = new RequestService(httpClient, configuration);
-            if (requestService.PostDataAsync(info.barcode).Result)
+            _logger.LogInformation("barcode added in the queue");
+            //HttpClient httpClient = new HttpClient();
+            
+            //requestService = new RequestService(httpClient);
+           // _requestService.re
+            if (_requestService.PostDataAsync(info.barcode).Result)
             {
-                _logger.Info($"post request sent");
+                _logger.LogInformation($"post request sent");
                 Console.WriteLine($"post request sent");
                 return true;
             }
